@@ -1,0 +1,22 @@
+Source: throttle
+Priority: optional
+Maintainer: Sam Varshavchik <mrsam@courier-mta.com>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.6.0
+Section: contrib/libs
+Homepage: https://www.libcxx.org/
+Rules-Requires-Root: no
+
+Package: throttle
+Section: contrib/libdevel
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Limit parallel build concurrency
+ This package installs the "throttle" binary. It takes arguments that
+ specify: the name of a lockfile, the number of concurrent invocations, and
+ the program to execute and its parameters.
+ .
+ Throttle uses the lock file to block more than the specified number of
+ concurrent throttle instance from executing the program and its parameters.
+ Additional invocations of throttle block until existing invocations are
+ complete.

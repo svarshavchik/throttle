@@ -9,6 +9,7 @@ config.log
 config.status
 configure
 depcomp
+/deb
 install-sh
 missing
 stamp-h1

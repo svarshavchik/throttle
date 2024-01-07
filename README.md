@@ -42,6 +42,11 @@ On Fedora, to build an installable rpm:
 make dist
 rpmbuild -ta throttle-{version}.tar.gz
 
+On Debian/Ubuntu, to build an installable deb:
+
+make deb
+sudo dpkg -i deb/throttle_<version>-*.deb
+
 Integrating throttle with autotools
 -----------------------------------
 

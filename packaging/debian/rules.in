@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_builddeb:
+	dh_builddeb -- $(DEB_BUILDDEB_OPTIONS)
+
+override_dh_auto_install:
+	dh_auto_install
+	dh_installdocs README.md
